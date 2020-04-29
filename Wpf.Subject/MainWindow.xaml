@@ -1,0 +1,31 @@
+﻿<Window x:Class="Wpf.Subject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Wpf.Subject"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="MainWindow"
+        Width="800"
+        Height="450"
+        d:DataContext="{d:DesignInstance local:MainWindowViewModel,
+                                         IsDesignTimeCreatable=False}"
+        mc:Ignorable="d">
+    <DockPanel LastChildFill="True">
+        <Button Command="{Binding ClickCommand}"
+                HorizontalAlignment="Left"
+                DockPanel.Dock="Top">
+            Click me
+        </Button>
+        <Button Command="{Binding ErrorCommand}"
+                HorizontalAlignment="Left"
+                DockPanel.Dock="Top">
+            Cause error
+        </Button>
+        <Button Command="{Binding CompleteCommand}"
+                HorizontalAlignment="Left"
+                DockPanel.Dock="Top">
+            Complete observable
+        </Button>
+        <TextBox IsReadOnly="True" Text="{Binding TextBox, Mode=OneWay}" />
+    </DockPanel>
+</Window>

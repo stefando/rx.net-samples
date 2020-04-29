@@ -1,0 +1,9 @@
+{
+  "name": "backend.autocomplete",
+  "version": "0.0.0",
+  "description": "Backend.Autocomplete",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
